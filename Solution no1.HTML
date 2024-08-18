@@ -1,0 +1,56 @@
+1. Create a simple page with some div tags and show different ways to add CSS as well as what happens when you target the same elements with inline, internal, and external CSS. Also, utilize comments in the project where required.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Methods Example</title>
+    <!-- Internal CSS: Styles applied within the <style> tag in the <head> section -->
+    <style>
+        .internal-style {
+            background-color: lightgreen;
+            color: darkgreen;
+            padding: 20px;
+            border: 2px solid green;
+        }
+        
+        .common-style {
+            font-size: 18px;
+            border-radius: 8px;
+        }
+    </style>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Inline CSS: Styles applied directly to the element using the style attribute -->
+    <div class="inline-style" style="background-color: lightblue; color: darkblue; padding: 20px; border: 2px solid blue;">
+        This div uses inline CSS.
+    </div>
+
+    <!-- Internal CSS: Styles applied from the <style> tag in the <head> section -->
+    <div class="internal-style">
+        This div uses internal CSS.
+    </div>
+
+    <!-- External CSS: Styles applied from an external stylesheet (styles.css) -->
+    <div class="external-style common-style">
+        This div uses external CSS.
+    </div>
+
+    <!-- External stylesheet link -->
+    <style>
+        /* External CSS (styles.css) */
+        .external-style {
+            background-color: lightcoral;
+            color: darkred;
+            padding: 20px;
+            border: 2px solid red;
+        }
+    </style>
+</body>
+
+</html>
