@@ -1,0 +1,85 @@
+2. Build an HTML page with multiple paragraphs, each assigned a unique class name. Write CSS rules using class selectors to apply distinct styling to each paragraph. Follow the BEM naming convention and explain how you've named the classes.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Class Example</title>
+    <style>
+        /* BEM Naming Convention Styles */
+        .content {
+            padding: 20px;
+        }
+
+        .content__paragraph--info {
+            font-size: 16px;
+            color: #007BFF;
+            background-color: #E9F5FF;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .content__paragraph--warning {
+            font-size: 16px;
+            color: #FFC107;
+            background-color: #FFF8E1;
+            padding: 10px;
+            border: 1px solid #FFC107;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .content__paragraph--error {
+            font-size: 16px;
+            color: #DC3545;
+            background-color: #F8D7DA;
+            padding: 10px;
+            border: 1px solid #DC3545;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p class="content__paragraph--info">This is an informational paragraph styled with BEM conventions.</p>
+        <p class="content__paragraph--warning">This is a warning paragraph styled with BEM conventions.</p>
+        <p class="content__paragraph--error">This is an error paragraph styled with BEM conventions.</p>
+    </div>
+</body>
+
+</html>
+
+
+
+Explanation
+BEM Naming Convention:
+
+Block: Represents the main component or container. In this case, the block is content. It groups related elements together.
+
+Element: Represents a part of the block that is dependent on it. For instance, paragraph is an element within the content block.
+
+Modifier: Represents different variations or states of the block or element. For example, --info, --warning, and --error are modifiers for the paragraph element, indicating different types of content.
+
+Class Names:
+
+.content: The block that contains all paragraphs. It provides padding for the entire section.
+
+.content__paragraph--info: An element within the content block with the info modifier, which styles informational paragraphs with specific colors and background.
+
+.content__paragraph--warning: An element within the content block with the warning modifier, which styles warning paragraphs with different colors and background.
+
+.content__paragraph--error: An element within the content block with the error modifier, which styles error paragraphs with a distinct color scheme.
+
+CSS Rules:
+Font Size and Color: Each modifier defines a unique font color and background color, making it easy to distinguish between different types of messages.
+
+Padding and Border: Each paragraph has consistent padding and border styling to maintain a unified look.
+
+Margin and Border Radius: Adds space between paragraphs and rounds the corners for a polished appearance.
+
+Using BEM helps in creating a clear structure in your CSS, making it easier to understand and maintain. Each class name provides specific information about the block, element, and its modifier, ensuring consistent styling and avoiding conflicts.
